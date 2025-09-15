@@ -1,0 +1,40 @@
+{
+  "tenants": [
+    {
+      "name": "Acme",
+      "subscription": "Free",
+      "users": [
+        {
+          "name": "Acme Admin",
+          "email": "admin@acme.test",
+          "password": "password",
+          "role": "Admin"
+        },
+        {
+          "name": "Acme User",
+          "email": "user@acme.test",
+          "password": "password",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "Globex",
+      "subscription": "Free",
+      "users": [
+        {
+          "name": "Globex Admin",
+          "email": "admin@globex.test",
+          "password": "password",
+          "role": "Admin"
+        },
+        {
+          "name": "Globex User",
+          "email": "user@globex.test",
+          "password": "password",
+          "role": "Member"
+        }
+      ]
+    }
+  ]
+}

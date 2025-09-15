@@ -5,7 +5,7 @@ import connectDB from "../config/db.js";
 import authRoutes from "../routes/authRoutes.js";
 import noteRoutes from "../routes/noteRoutes.js";
 import tenantRoutes from "../routes/tenantRoutes.js";
-import serverless from "serverless-http";
+
 
 dotenv.config({ quiet: true });
 const app = express();
@@ -28,4 +28,7 @@ app.use("/tenants", tenantRoutes);
 // Health check
 app.get("/health", (req, res) => res.json({ status: "ok" }));
 
-export default serverless(app);
+
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Server running on port ${process.env.PORT || 5000}`);
+});

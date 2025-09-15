@@ -1,10 +1,10 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import connectDB from "./config/db.js";
-import authRoutes from "./routes/authRoutes.js";
-import noteRoutes from "./routes/noteRoutes.js";
-import tenantRoutes from "./routes/tenantRoutes.js";
+import connectDB from "../config/db.js";
+import authRoutes from "../routes/authRoutes.js";
+import noteRoutes from "../routes/noteRoutes.js";
+import tenantRoutes from "../routes/tenantRoutes.js";
 import serverless from "serverless-http";
 
 dotenv.config({ quiet: true });
@@ -24,8 +24,6 @@ app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/notes", noteRoutes);
 app.use("/tenants", tenantRoutes);
-
-
 
 // Health check
 app.get("/health", (req, res) => res.json({ status: "ok" }));
